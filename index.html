@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davetiye | Barcelona</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-content fade-in">
+            <h1 class="couple-names">EMRE & AYŞE</h1>
+            <p class="wedding-date">15 EYLÜL 2026</p>
+            <p class="wedding-location">İSTANBUL</p>
+        </div>
+    </header>
+
+    <!-- Families Section -->
+    <section class="families-section fade-in">
+        <h2 class="section-title">AİLELER</h2>
+        <div class="heart-divider"></div>
+        <div class="parents-container">
+            <div class="parents">
+                <h3>AYŞE'NİN AİLESİ</h3>
+                <p>Fatma & Ahmet Yılmaz</p>
+            </div>
+            <div class="parents">
+                <h3>EMRE'NİN AİLESİ</h3>
+                <p>Ayten & Mehmet Demir</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Program -->
+    <section class="program-section fade-in">
+        <h2 class="section-title">MEKAN & PROGRAM</h2>
+        <div class="heart-divider"></div>
+        <div class="program-details">
+            <div class="program-item">
+                <span class="icon">📍</span>
+                <h3>Dalyan Club</h3>
+                <p>Fenerbahçe Mah. Atlıhan Sok. No:3<br>Kadıköy / İstanbul</p>
+            </div>
+            <div class="program-item">
+                <span class="icon">🕒</span>
+                <h3>Zaman Çizelgesi</h3>
+                <p>19:00 - Karşılama</p>
+                <p>20:00 - Nikah Töreni</p>
+                <p>20:30 - Yemek ve Eğlence</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="countdown-section fade-in">
+        <h2 class="section-title">GERİ SAYIM</h2>
+        <div class="heart-divider"></div>
+        <div id="countdown" class="countdown-container">
+            <div class="time-box">
+                <span id="days" class="time-value">00</span>
+                <span class="time-label">GÜN</span>
+            </div>
+            <div class="time-box">
+                <span id="hours" class="time-value">00</span>
+                <span class="time-label">SAAT</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes" class="time-value">00</span>
+                <span class="time-label">DAKİKA</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds" class="time-value">00</span>
+                <span class="time-label">SANİYE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Form -->
+    <section class="rsvp-section fade-in">
+        <h2 class="section-title">KATILIM DURUMU</h2>
+        <div class="heart-divider"></div>
+        <form class="rsvp-form" id="rsvpForm">
+            <div class="form-group">
+                <label for="name">Adınız Soyadınız</label>
+                <input type="text" id="name" required placeholder="Ad ve Soyad">
+            </div>
+            <div class="form-group">
+                <label for="attendance">Katılım Durumunuz</label>
+                <select id="attendance" required>
+                    <option value="" disabled selected>Seçiniz</option>
+                    <option value="yes">Katılıyorum</option>
+                    <option value="no">Katılamıyorum</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="guests">Kişi Sayısı</label>
+                <input type="number" id="guests" min="1" max="5" placeholder="Kaç kişi katılacaksınız?">
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız (Opsiyonel)</label>
+                <textarea id="message" rows="4" placeholder="Çiftimize iletmek istediğiniz notlar..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">GÖNDER</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Emre & Ayşe. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* Root Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --accent-color: #333333;
+    --light-gray: #f5f5f5;
+    --border-color: #e0e0e0;
+    --font-family: 'Montserrat', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/* Typography Utilities */
+.section-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.heart-divider {
+    width: 50px;
+    height: 1px;
+    background-color: var(--accent-color);
+    margin: 0 auto 3rem;
+    position: relative;
+}
+
+.heart-divider::after {
+    content: "♥";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-color);
+    padding: 0 10px;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* We'll use a grayscale floral placeholder for the background */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    color: white;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    padding: 2rem;
+}
+
+.couple-names {
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.wedding-date {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+}
+
+.wedding-location {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+/* General Section Layout */
+section {
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Families Section */
+.parents-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3rem;
+    text-align: center;
+}
+
+.parents h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.parents p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Program Section */
+.program-section {
+    background-color: var(--light-gray);
+    max-width: 100%;
+}
+
+.program-details {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 3rem;
+    text-align: center;
+}
+
+.program-item {
+    flex: 1;
+    min-width: 300px;
+}
+
+.program-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.program-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Countdown Section */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+}
+
+.time-value {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--accent-color);
+}
+
+.time-label {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* RSVP Form Section */
+.rsvp-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #000;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .couple-names {
+        font-size: 2.5rem;
+    }
+    
+    .countdown-container {
+        gap: 1rem;
+    }
+    
+    .time-box {
+        min-width: 70px;
+    }
+    
+    .time-value {
+        font-size: 2rem;
+    }
+}
