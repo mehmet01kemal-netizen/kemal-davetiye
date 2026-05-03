@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkVisibility);
     
     // 2. Countdown Timer Logic
-    // Set wedding date to September 15, 2026
-    const weddingDate = new Date('September 15, 2026 19:00:00').getTime();
+    // Set wedding date to July 5, 2026 13:00
+    const weddingDate = new Date('July 5, 2026 13:00:00').getTime();
     
     const updateCountdown = () => {
         const now = new Date().getTime();
@@ -50,30 +50,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call
     
-    // 3. RSVP Form Submission Handling
-    const rsvpForm = document.getElementById('rsvpForm');
-    if (rsvpForm) {
-        rsvpForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values (just for demonstration)
-            const name = document.getElementById('name').value;
-            const status = document.getElementById('attendance').value;
-            
-            // Simple feedback to user
-            const btn = rsvpForm.querySelector('.submit-btn');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'TEŞEKKÜRLER!';
-            btn.style.backgroundColor = '#4CAF50';
-            btn.style.color = 'white';
-            
-            setTimeout(() => {
-                btn.innerText = originalText;
-                btn.style.backgroundColor = '';
-                btn.style.color = '';
-                rsvpForm.reset();
-            }, 3000);
-        });
-    }
 });
